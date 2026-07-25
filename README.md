@@ -1,33 +1,60 @@
-# interpretador-brainfuck
+# Brainfuck Interpreter (x86-64 Assembly)
 
-→ ignore o readme mau feito e curto
+Um interpretador da linguagem **Brainfuck** escrito em **Assembly x86-64 (NASM)** para Linux.
 
-o projeto usa **NASM Intel x86_64**!
+> Este é o meu primeiro projeto maior em Assembly.
 
-meu primeiro projeto serio com Assembly ate agora
-isso **nao foi feito com IA**, apenas com as coisas que estao no meu caderno :P
+## Características
 
-## o que o ``main.bf`` faz?
+- Interpretador dos 8 operadores da linguagem Brainfuck
+- Leitura do código a partir de um arquivo `.bf`
+- Fita de memória com 30.000 células
+- Entrada e saída usando syscalls do Linux
+- Escrito em NASM (Intel Syntax)
 
-→ o ``main.bf`` é apenas um codigo de exemplo, altere ele se quiser
+## Operadores suportados
 
-ele pede um caractere e avança 3 casas
-exemplo de saida:
+| Operador | Função |
+|----------|--------|
+| `>` | Avança o ponteiro |
+| `<` | Recua o ponteiro |
+| `+` | Incrementa a célula atual |
+| `-` | Decrementa a célula atual |
+| `.` | Imprime um caractere |
+| `,` | Lê um caractere |
+| `[` | Início de loop |
+| `]` | Fim de loop |
 
+## Exemplo
+
+o arquivo `main.bf` é apenas um exemplo.
+
+ele le um caractere do teclado e imprime o caractere tres posições à frente na tabela ASCII.
+
+exemplo:
+
+```text
+entrada:
+A
+
+saida:
+D
 ```
-$ user@exemplo: ./main.asm
-A ← caractere que digitei
-D ← avança 3 casas
-$ user@exemplo:
+
+## compilação
+
+```bash
+nasm -f elf64 -o main.o main.asm
+ld -o main main.o
+./main
 ```
 
-## como executar o projeto?
+## tecnologias que usei
 
-use:
-```
-$ user@exemplo: nasm -f elf64 -o main.o main.asm
-$ user@exemplo: ld -o main main.o
-$ user@exemplo: ./main
-```
+- NASM
+- Linux x86-64
+- Syscalls do Linux
 
-certifique-se de ter as ferramentas certas instaladas!
+## Observações
+
+Este projeto foi desenvolvido como estudo utilizando apenas minhas anotações pessoais sobre Assembly.
