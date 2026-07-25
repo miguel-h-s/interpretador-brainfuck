@@ -18,3 +18,14 @@ A ← caractere que digitei
 D ← avança 3 casas
 $ user@exemplo:
 ```
+
+## como executar o projeto?
+
+use:
+```
+$ user@exemplo: nasm -f elf64 -o main.o main.asm
+$ user@exemplo: ld -o main main.o
+$ user@exemplo: ./main
+```
+
+certifique-se de ter as ferramentas certas instaladas!
