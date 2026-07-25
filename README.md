@@ -2,6 +2,8 @@
 
 → ignore o readme mau feito e curto
 
+o projeto usa **NASM Intel x86_64**!
+
 meu primeiro projeto serio com Assembly ate agora
 isso **nao foi feito com IA**, apenas com as coisas que estao no meu caderno :P
 
